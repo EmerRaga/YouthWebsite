@@ -9,3 +9,30 @@
 .navbar-brand{
     font-size: 40px;
 } 
+.Mainpage{
+    height: 900px;
+    width: auto;
+    background-color: gray;
+}
+.Mainpage_Image{
+    text-align: center;
+    padding-top: 390px;
+    font-size: 50px;
+}
+.Mainpage_Title{
+    text-align: center;
+    padding-top: 5px;
+    font-size: 50px;
+}
+.meettheteamheader{
+    text-align: center;
+    padding-top: 20px;
+}
+.belowmeettheteam{
+    padding: 2px;
+    margin: 0 auto;
+    height: 10px;
+    width: 100px;
+}
+
+
