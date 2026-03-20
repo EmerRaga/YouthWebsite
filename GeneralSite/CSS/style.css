@@ -1,6 +1,3 @@
-html {
-  scroll-behavior: smooth;
-}
 .navbar {
   padding: 25px 60px;
 }
@@ -59,4 +56,8 @@ html {
 }
 .MajorTitle{
   padding-top: 80px;
+}
+.FooterLogo{
+  height: 100px;
+  width: 125px;
 }
