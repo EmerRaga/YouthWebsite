@@ -5,10 +5,8 @@ html {
   padding: 25px 60px;
 }
 .WebsiteNavbarLogo {
-  height: 95px;     
-  width: 95px;    
-  border-radius: 50%;
-  object-fit: cover;  
+  height: 101px;
+  width: 525px;     
 }
 .navbar-nav {
   text-align: left;
@@ -52,10 +50,13 @@ html {
 .what_we_do{
     padding: 80px;
 }
-.MEETTHE_TEAM{
-    padding: 80px;
+.meettheteams{
+    padding: 140px;
 }
 .meettheteam
 {
     padding: 80px;
+}
+.MajorTitle{
+  padding-top: 80px;
 }
