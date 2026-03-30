@@ -1,0 +1,194 @@
+.navbar {
+  padding: 25px 60px;
+}
+.WebsiteNavbarLogo {
+  height: 101px;
+  width: 525px;     
+}
+.navbar-nav {
+  text-align: left;
+  font-size: 30px;
+    margin-left: auto;
+}
+.navbar-brand{
+    font-size: 40px;
+} 
+.Mainpage_Image{
+    text-align: center;
+    padding-top: 390px;
+    font-size: 50px;
+}
+.Mainpage_Title{
+    text-align: center;
+    padding-top: 5px;
+    font-size: 50px;
+}
+.meettheteamheader{
+    text-align: center;
+    padding-top: 20px;
+}
+.belowmeettheteam{
+    padding: 2px;
+    margin: 0 auto;
+    height: 10px;
+    width: 100px;
+}
+.our_story{
+    padding: 80px;
+}
+.about_us{
+   padding: 80px;
+}
+.what_we_do{
+    padding: 80px;
+}
+.meettheteams{
+    padding: 140px;
+}
+.meettheteam
+{
+    padding: 80px;
+}
+.MajorTitle{
+  padding-top: 80px;
+}
+.FooterLogo{
+  height: 100px;
+  width: 125px;
+}
+html {
+  scroll-behavior: smooth;
+}
+.team-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+.team-scroll {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 20px;
+  scroll-behavior: smooth;
+}
+.team-card {
+  min-width: 220px;
+  height: 320px;
+  background: linear-gradient(180deg, white, #f8fbff);
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  flex-shrink: 0;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+.team-card:hover {
+  transform: translateY(-5px);
+}
+.team-photo {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+.age {
+  font-size: 13px;
+  color: grey;
+  margin: 0;
+}
+.role {
+  font-size: 14px;
+  color: #555;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.learn-btn {
+  margin-top: auto;
+  background: #0d6efd;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  width: 100%;
+}
+.team-panel {
+  position: fixed;
+  left: 0;
+  bottom: -100%;
+  width: 100%;
+  height: 75%;
+  background: white;
+  transition: 0.4s;
+  box-shadow: 0 -10px 30px rgba(0,0,0,0.2);
+  z-index: 999;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+.panel-content {
+  padding: 40px;
+  text-align: center;
+}
+.panel-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+.panel-role {
+  color: gray;
+  margin-bottom: 15px;
+}
+.close-btn {
+  position: absolute;
+  right: 25px;
+  top: 20px;
+  font-size: 28px;
+  cursor: pointer;
+}
+.featured-team {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+}
+.featured-card {
+  width: 260px;
+  background: white;
+  border-radius: 25px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  transition: 0.3s;
+}
+.featured-card:hover {
+  transform: translateY(-8px);
+}
+.featured-photo {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+.featured-desc {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 15px;
+}
+.team-divider {
+  margin: 40px auto;
+  width: 60%;
+}
+.section-divider {
+  width: 70%;
+  margin: 60px auto;
+  border-top: 2px solid;
+}
+.btn-linkedin {
+  background-color: #0A66C2;
+  color: white;
+  border-radius: 8px;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: inline-block;
+}
