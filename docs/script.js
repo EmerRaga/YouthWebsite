@@ -2,11 +2,15 @@ window.openPanel = function(member) {
   const panel = document.getElementById("teamPanel");
   const text = document.getElementById("panelText");
 
+
   if (member === "panel1") {
     text.innerHTML = `
       <img src="Images/Profile_PictureNumber2.jpg" class="panel-img">
       <h2>Nazeeya Syedda</h2>
       <p class="panel-role">Founder & Executive Director</p>
+      <p>
+        <a href="https://www.linkedin.com/in/syedda-nazeeya-487a7335b/" target="_blank" class="btn-linkedin">LinkedIn</a>
+      </p>
       <p>
         Syedda Nazeeya is a Year 12 student, based in Australia, and pursuing a career in the biological sciences. She founded @uygyouth in 2025, drawn by her passion for cultural preservation and desire to give back to her community. Her lived experience as a young Uyghur in the diaspora is at the heart of everything she does. Outside of volunteering, she enjoys reading, travelling, spending time with friends, and existing in nature.
       </p>
@@ -16,11 +20,15 @@ window.openPanel = function(member) {
     `;
   }
 
+
   if (member === "panel2") {
     text.innerHTML = `
       <img src="Images/Profile_PictureNumber1.jpg" class="panel-img">
       <h2>Emin Uyghur</h2>
       <p class="panel-role">Co-Founder & Deputy Director</p>
+      <p>
+        <a href="https://www.linkedin.com/in/emin-yusuyin-376b18272/" target="_blank" class="btn-linkedin">LinkedIn</a>
+      </p>
       <p>
         Emin co-foundeded Uyghur Youth alongside Nazeeya in 2025, and now oversee's everything as Deputy Director, including all work done in Canada, creating social media post's and collabrating within different departments of the Uyghur Youth. Student at the University of Alberta going to studying PoliSci, he hopes to make at least one meaningful impact during his lifetime.
       </p>
@@ -30,9 +38,10 @@ window.openPanel = function(member) {
     `;
   }
 
+
   if (member === "panel3") {
     text.innerHTML = `
-      <img src="https://www.bootdey.com/img/Content/avatar/avatar7.png" class="panel-img">
+      <img src="Images/Untitled7.png" class="panel-img">
       <h2>Alip Mawlan</h2>
       <p class="panel-role">Developer</p>
       <p>
@@ -44,9 +53,10 @@ window.openPanel = function(member) {
     `;
   }
 
+
   if (member === "panel4") {
     text.innerHTML = `
-      <img src="https://i.pinimg.com/564x/bb/97/58/bb9758a0fbdda76e4ad232e64dce635a.jpg" class="panel-img">
+      <img src="Images/Untitled6.png" class="panel-img">
       <h2>Alim</h2>
       <p class="panel-role">Developer</p>
       <p>
@@ -58,9 +68,10 @@ window.openPanel = function(member) {
     `;
   }
 
+
   if (member === "panel5") {
     text.innerHTML = `
-      <img src="https://i.pinimg.com/736x/d6/8f/d9/d68fd912546a71d978a8208013b34e1f.jpg" class="panel-img">
+      <img src="Images/Untitled5 2.png" class="panel-img">
       <h2>Quash</h2>
       <p class="panel-role">Media Editor</p>
       <p>
@@ -72,8 +83,10 @@ window.openPanel = function(member) {
     `;
   }
 
+
   panel.style.bottom = "0";
 };
+
 
 window.closePanel = function() {
   document.getElementById("teamPanel").style.bottom = "-100%";
