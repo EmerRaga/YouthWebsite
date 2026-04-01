@@ -3,6 +3,7 @@
 ========================= */
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 90px;
 }
 
 body {
@@ -421,11 +422,6 @@ footer .text-uppercase {
   width: 92px;
   height: 92px;
   object-fit: contain;
-}
-
- html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 90px;
 }
 
 #contact {
