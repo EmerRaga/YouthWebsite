@@ -423,6 +423,7 @@ footer .text-uppercase {
   object-fit: contain;
 }
 
+ html {
   scroll-behavior: smooth;
   scroll-padding-top: 90px;
 }
