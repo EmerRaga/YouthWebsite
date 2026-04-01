@@ -1,42 +1,81 @@
-/* GENERAL */
+/* =========================
+   GLOBAL / BASE
+========================= */
 html {
   scroll-behavior: smooth;
 }
 
-/* NAVBAR */
+body {
+  background: linear-gradient(180deg, #f8fafc 0%, #eef3f8 100%);
+  color: #1f2937;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+/* =========================
+   NAVBAR
+========================= */
 .navbar {
-  padding: 20px 40px;
+  padding: 18px 40px;
+  background: rgba(255, 255, 255, 0.72) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.14);
 }
 
 .WebsiteNavbarLogo {
+  display: block;
   height: auto;
   max-width: 100%;
+  width: clamp(180px, 36vw, 525px);
 }
 
 .navbar-nav {
   text-align: left;
-  font-size: clamp(16px, 2vw, 30px);
+  font-size: clamp(16px, 1.8vw, 24px);
   margin-left: auto;
+  gap: 10px;
 }
 
 .navbar-brand {
   font-size: clamp(22px, 3vw, 40px);
 }
 
-/* HERO SECTION */
+.nav-link {
+  font-weight: 500;
+}
+
+/* =========================
+   HERO / TITLES
+========================= */
 .Mainpage_Image {
   text-align: center;
-  padding-top: 20vh; /* responsive instead of 390px */
-  font-size: clamp(24px, 5vw, 50px);
+  padding-top: 18vh;
+  font-size: clamp(26px, 5vw, 50px);
 }
 
 .Mainpage_Title {
   text-align: center;
   padding-top: 5px;
-  font-size: clamp(24px, 5vw, 50px);
+  font-size: clamp(26px, 5vw, 50px);
 }
 
-/* SECTIONS */
+.MajorTitle {
+  padding-top: 60px;
+}
+
+.display-5,
+h2,
+h3,
+.team-title {
+  letter-spacing: -0.03em;
+  color: #1e293b;
+}
+
+/* =========================
+   GENERAL SECTIONS
+========================= */
 .meettheteamheader {
   text-align: center;
   padding-top: 20px;
@@ -57,22 +96,15 @@ html {
 }
 
 .meettheteams {
-  padding: 100px;
+  padding: 100px 60px;
 }
 
-.MajorTitle {
-  padding-top: 60px;
-}
-
-.FooterLogo {
-  height: auto;
-  max-width: 100px;
-}
-
-/* TEAM SECTION */
+/* =========================
+   TEAM SECTION
+========================= */
 .team-title {
-  font-size: clamp(24px, 4vw, 3rem);
-  font-weight: bold;
+  font-size: clamp(26px, 4vw, 3rem);
+  font-weight: 700;
   margin-bottom: 40px;
 }
 
@@ -80,101 +112,66 @@ html {
   display: flex;
   overflow-x: auto;
   gap: 20px;
-  padding: 20px;
+  padding: 20px 6px;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
+}
+
+.team-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+
+.team-scroll::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.45);
+  border-radius: 999px;
 }
 
 .team-card {
   min-width: 220px;
   max-width: 80%;
   height: auto;
-  background: linear-gradient(180deg, white, #f8fbff);
-  border-radius: 20px;
-  padding: 20px;
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-radius: 24px;
+  padding: 24px 20px;
   text-align: center;
   flex-shrink: 0;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-  transition: 0.3s;
   scroll-snap-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  box-shadow: 0 12px 35px rgba(15, 23, 42, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .team-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
 }
 
 .team-photo {
-  width: 80px;
-  height: 80px;
+  width: 84px;
+  height: 84px;
   border-radius: 50%;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+  object-fit: cover;
 }
 
 .age {
-  font-size: 12px;
-  color: grey;
+  font-size: 13px;
+  color: #6b7280;
   margin: 0;
 }
 
 .role {
-  font-size: 13px;
-  color: #555;
+  font-size: 14px;
+  color: #475569;
   font-weight: 600;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
-.learn-btn {
-  margin-top: auto;
-  background: #0d6efd;
-  color: white;
-  border: none;
-  padding: 12px;
-  border-radius: 10px;
-  width: 100%;
-  font-size: 15px;
-}
-
-/* PANEL */
-.team-panel {
-  position: fixed;
-  left: 0;
-  bottom: -100%;
-  width: 100%;
-  height: 80%;
-  background: white;
-  transition: 0.4s;
-  box-shadow: 0 -10px 30px rgba(0,0,0,0.2);
-  z-index: 999;
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
-}
-
-.panel-content {
-  padding: 30px;
-  text-align: center;
-}
-
-.panel-img {
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-  margin-bottom: 15px;
-}
-
-.panel-role {
-  color: gray;
-  margin-bottom: 15px;
-}
-
-.close-btn {
-  position: absolute;
-  right: 20px;
-  top: 15px;
-  font-size: 26px;
-  cursor: pointer;
-}
-
-/* FEATURED TEAM */
+/* =========================
+   FEATURED TEAM
+========================= */
 .featured-team {
   display: flex;
   justify-content: center;
@@ -184,69 +181,273 @@ html {
 }
 
 .featured-card {
-  width: 260px;
-  max-width: 90%;
-  background: white;
-  border-radius: 25px;
-  padding: 20px;
+  width: 280px;
+  max-width: 92%;
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-radius: 28px;
+  padding: 26px 22px;
   text-align: center;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-  transition: 0.3s;
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  box-shadow: 0 12px 35px rgba(15, 23, 42, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .featured-card:hover {
   transform: translateY(-8px);
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.14);
 }
 
 .featured-photo {
-  width: 100px;
-  height: 100px;
+  width: 104px;
+  height: 104px;
   border-radius: 50%;
   margin-bottom: 15px;
+  object-fit: cover;
 }
 
 .featured-desc {
   font-size: 14px;
-  color: #555;
+  color: #475569;
+  margin-bottom: 15px;
+  line-height: 1.7;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.learn-btn,
+.btn-linkedin,
+.btn-primary {
+  background-color: #0d6efd;
+  color: white;
+  border: none;
+  border-radius: 14px;
+  padding: 12px 18px;
+  text-decoration: none;
+  display: inline-block;
+  width: 100%;
+  font-weight: 600;
+  box-shadow: 0 8px 20px rgba(13, 110, 253, 0.18);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, opacity 0.25s ease;
+}
+
+.learn-btn:hover,
+.btn-linkedin:hover,
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(13, 110, 253, 0.24);
+  opacity: 0.98;
+}
+
+.btn-linkedin {
+  background-color: #0A66C2;
+  width: auto;
+}
+
+/* =========================
+   PANEL / POPUP
+========================= */
+.team-panel {
+  position: fixed;
+  left: 0;
+  bottom: -100%;
+  width: 100%;
+  height: 80%;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  transition: bottom 0.4s ease;
+  box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.16);
+  z-index: 999;
+  border-top-left-radius: 28px;
+  border-top-right-radius: 28px;
+}
+
+.panel-content {
+  padding: 32px 24px;
+  text-align: center;
+}
+
+.panel-img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  object-fit: cover;
+}
+
+.panel-role {
+  color: #64748b;
   margin-bottom: 15px;
 }
 
-/* DIVIDERS */
+.close-btn {
+  position: absolute;
+  right: 20px;
+  top: 14px;
+  font-size: 28px;
+  cursor: pointer;
+  line-height: 1;
+}
+
+/* =========================
+   MISSION / INFO CARDS
+   For the overlapping icon sections
+========================= */
+.info-card,
+.mission-card,
+.value-card {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-radius: 28px;
+  padding: 90px 24px 32px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  position: relative;
+  overflow: visible;
+}
+
+.info-card img,
+.mission-card img,
+.value-card img {
+  width: 96px;
+  height: 96px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 18px;
+  position: absolute;
+  top: -48px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, #8ec5ff, #5ea8ff);
+  border-radius: 50%;
+  padding: 14px;
+  box-shadow: 0 12px 24px rgba(13, 110, 253, 0.2);
+}
+
+.info-card h3,
+.mission-card h3,
+.value-card h3 {
+  margin-top: 8px;
+  margin-bottom: 14px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.info-card p,
+.mission-card p,
+.value-card p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #4b5563;
+}
+
+/* =========================
+   DIVIDERS
+========================= */
 .team-divider {
   margin: 40px auto;
-  width: 60%;
+  width: min(60%, 700px);
+  border-top: 1px solid rgba(100, 116, 139, 0.2);
 }
 
 .section-divider {
-  width: 70%;
-  margin: 60px auto;
-  border-top: 2px solid;
+  width: min(72%, 820px);
+  margin: 72px auto;
+  border-top: 1px solid rgba(100, 116, 139, 0.2);
 }
 
-/* BUTTON */
-.btn-linkedin {
-  background-color: #0A66C2;
-  color: white;
-  border-radius: 8px;
-  padding: 10px 15px;
+/* =========================
+   FOOTER
+========================= */
+footer {
+  background: linear-gradient(180deg, #f8fafc, #eef4f8) !important;
+  color: #334155;
+  border-top: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+.InfoFooter {
+  padding-top: 10px;
+}
+
+footer h6 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  color: #374151;
+  margin-bottom: 20px;
+}
+
+footer p,
+footer a {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #475569;
+}
+
+footer a {
   text-decoration: none;
-  display: inline-block;
+  transition: color 0.25s ease, opacity 0.25s ease;
 }
 
-/* 🔥 MOBILE FIXES */
-@media (max-width: 768px) {
+footer a:hover {
+  color: #0d6efd;
+}
 
+footer .row {
+  align-items: flex-start;
+}
+
+footer .text-uppercase {
+  letter-spacing: 0.04em;
+}
+
+.footer-logo-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.FooterLogo {
+  display: block;
+  margin: 0 auto 18px auto;
+  width: 92px;
+  height: 92px;
+  object-fit: contain;
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 768px) {
   .navbar {
-    padding: 15px 20px;
+    padding: 14px 18px;
+  }
+
+  .WebsiteNavbarLogo {
+    width: min(68vw, 260px);
   }
 
   .navbar-nav {
     font-size: 16px;
     text-align: center;
+    padding-top: 10px;
   }
 
   .Mainpage_Image {
-    padding-top: 15vh;
+    padding-top: 14vh;
+    font-size: clamp(24px, 7vw, 36px);
+  }
+
+  .Mainpage_Title {
+    font-size: clamp(24px, 7vw, 36px);
   }
 
   .our_story,
@@ -257,20 +458,120 @@ html {
   }
 
   .meettheteams {
-    padding: 60px 20px;
+    padding: 60px 18px;
+  }
+
+  .MajorTitle {
+    padding-top: 36px;
+  }
+
+  .team-title {
+    margin-bottom: 28px;
+  }
+
+  .team-scroll {
+    gap: 16px;
+    padding: 12px 4px;
   }
 
   .team-card {
-    min-width: 180px;
+    min-width: 185px;
+    max-width: 85%;
+    padding: 20px 16px;
+  }
+
+  .team-photo {
+    width: 76px;
+    height: 76px;
   }
 
   .featured-team {
     flex-direction: column;
     align-items: center;
+    gap: 20px;
+  }
+
+  .featured-card {
+    width: 100%;
+    max-width: 340px;
+    padding: 22px 18px;
+  }
+
+  .featured-photo {
+    width: 92px;
+    height: 92px;
+  }
+
+  .learn-btn,
+  .btn-primary {
+    font-size: 15px;
+    padding: 12px 16px;
+  }
+
+  .team-panel {
+    height: 84%;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
   }
 
   .panel-content {
-    padding: 20px;
+    padding: 24px 18px;
   }
 
+  .close-btn {
+    top: 12px;
+    right: 16px;
+    font-size: 26px;
+  }
+
+  .info-card,
+  .mission-card,
+  .value-card {
+    padding: 78px 18px 24px;
+    border-radius: 22px;
+  }
+
+  .info-card img,
+  .mission-card img,
+  .value-card img {
+    width: 82px;
+    height: 82px;
+    top: -41px;
+    padding: 12px;
+  }
+
+  .info-card h3,
+  .mission-card h3,
+  .value-card h3 {
+    font-size: 1.15rem;
+  }
+
+  .info-card p,
+  .mission-card p,
+  .value-card p {
+    font-size: 0.98rem;
+    line-height: 1.65;
+  }
+
+  .section-divider {
+    width: 86%;
+    margin: 48px auto;
+  }
+
+  footer {
+    text-align: center;
+  }
+
+  footer .container {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  footer .row > div {
+    margin-bottom: 28px;
+  }
+
+  .FooterLogo {
+    margin-bottom: 14px;
+  }
 }
