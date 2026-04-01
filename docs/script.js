@@ -42,7 +42,7 @@ window.openPanel = function(member) {
   if (member === "panel3") {
     text.innerHTML = `
       <img src="Images/Untitled7.png" class="panel-img">
-      <h2>Alip Mawlan</h2>
+      <h2>Alip</h2>
       <p class="panel-role">Developer</p>
       <p>
         Alip likes playing video games, drawing, and cooking! He also like making new meals, and most of all, likes eating them! He hopes to pursue a career in finance one day!
