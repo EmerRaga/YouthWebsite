@@ -91,3 +91,18 @@ window.openPanel = function(member) {
 window.closePanel = function() {
   document.getElementById("teamPanel").style.bottom = "-100%";
 };
+
+document.addEventListener("DOMContentLoaded", function () {
+  const navLinks = document.querySelectorAll(".navbar-collapse .nav-link");
+  const navbarCollapse = document.querySelector(".navbar-collapse");
+
+  navLinks.forEach(function (link) {
+    link.addEventListener("click", function () {
+      if (window.innerWidth < 992 && navbarCollapse.classList.contains("show")) {
+        const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse) 
+          || new bootstrap.Collapse(navbarCollapse, { toggle: false });
+        bsCollapse.hide();
+      }
+    });
+  });
+});
