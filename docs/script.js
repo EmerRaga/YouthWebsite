@@ -82,6 +82,21 @@ window.openPanel = function(member) {
       </p>
     `;
   }
+  
+
+  if (member === "panel6") {
+    text.innerHTML = `
+      <img src="Images/Aureila.png" class="panel-img">
+      <h2>Aureila</h2>
+      <p class="panel-role">Media Editor</p>
+      <p>
+        Aureila is an 18 year old residing in Canada, she aspires to make a revolutionary impact alongside other uyghurs to free and make our homeland a sovereign nation. She is in pursuit of becoming a travel nurse in hopes to help others and share the uyghur voice across the world. She joined @uygyouth to contribute a stand in the current state of our nation, spreading the neglected voices of the uyghur people to social media.
+      </p>
+      <p>
+       “When the Power of Love Overcomes the Love of Power the World Will Know Peace.” - Jimi Hendrix
+      </p>
+    `;
+  }
 
 
   panel.style.bottom = "0";
