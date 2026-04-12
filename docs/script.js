@@ -58,7 +58,7 @@ window.openPanel = function(member) {
     text.innerHTML = `
       <img src="Images/Untitled6.png" class="panel-img">
       <h2>Alim</h2>
-      <p class="panel-role">Developer</p>
+      <p class="panel-role">Treasurer</p>
       <p>
        Alim is a 17-year-old high school student based in Canada. He joined @uygyouth in its early stages after being invited by the founders, as he wanted to be more connected to his community and contribute to something meaningful. Through his work, he aims to support impactful initiatives while continuing to grow his skills and interests. He has a strong interest in mathematics and the sciences, particularly physics, with a focus on space-related fields such as astronomy and quantum physics. He hopes to pursue a career in this area in the future. Outside of academics, Alim enjoys playing video games, watching anime, and reading manga. He also has a love for food and enjoys cooking, as well as trying new meals and cuisines whenever he gets the chance.
       </p>
@@ -94,6 +94,21 @@ window.openPanel = function(member) {
       </p>
       <p>
        “When the Power of Love Overcomes the Love of Power the World Will Know Peace.” - Jimi Hendrix
+      </p>
+    `;
+  }
+
+
+  if (member === "panel7") {
+    text.innerHTML = `
+      <img src="Images/samira.png" class="panel-img">
+      <h2>Samira</h2>
+      <p class="panel-role">Outreach Officer</p>
+      <p>
+        Samira is a 17 y.o. High School student based in U.S. and currently has an interest in law, politics and history. She joined Uyg Youth because she wants to improve uyghur community and make a strong representation of who Uyghurs are in the world area. Her hobbies are reading books, research, MUN, cooking, movies and traveling.
+      </p>
+      <p>
+       “Tirishiqan – yetidu, yalqau – qelidu." "The diligent succeed, the lazy fall behind." - Uyghur proverb
       </p>
     `;
   }
