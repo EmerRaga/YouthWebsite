@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Uyg Youth Art | Uyghur Youth International</title>
+  <meta name="description" content="Explore featured Uyghur youth art on Uyg Youth. Discover creative submissions, stories behind each piece, and submit your own artwork to be featured.">
+  <meta name="keywords" content="Uyg Youth art, Uyghur youth art, Uyghur art submissions, Uyghur artists, Uyghur Youth International">
+  <meta name="author" content="Uyg Youth">
+  <meta name="robots" content="index, follow">
+
+  <link rel="canonical" href="https://uygyouth.org/art.html">
+
+  <meta property="og:title" content="Uyg Youth Art | Uyghur Youth International">
+  <meta property="og:description" content="A curated gallery of art by Uyghur youth, featuring stories, artists, and creative expression.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://uygyouth.org/art.html">
+  <meta property="og:image" content="https://uygyouth.org/Images/YouthWebsiteHero2.jpeg">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Uyg Youth Art | Uyghur Youth International">
+  <meta name="twitter:description" content="Explore featured Uyghur youth art and submit your own work to be featured on Uyg Youth.">
+  <meta name="twitter:image" content="https://uygyouth.org/Images/YouthWebsiteHero2.jpeg">
+
+  <link rel="icon" type="image/jpeg" href="Images/YouthWebsiteHero2.jpeg">
+  <link rel="shortcut icon" type="image/jpeg" href="Images/YouthWebsiteHero2.jpeg">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="CSS/style.css">
+
+  <style>
+    body {
+      background: #f8f7f4;
+      color: #1f1f1f;
+    }
+
+    .art-hero {
+      background: linear-gradient(180deg, #f5f8ff 0%, #f8f7f4 100%);
+      padding: 90px 0 50px;
+      text-align: center;
+    }
+
+    .art-hero h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+    }
+
+    .art-hero p {
+      max-width: 760px;
+      margin: 18px auto 0;
+      font-size: 1.1rem;
+      color: #5a5a5a;
+    }
+
+    .art-actions {
+      margin-top: 28px;
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .art-actions .btn {
+      border-radius: 999px;
+      padding: 12px 22px;
+      font-weight: 600;
+    }
+
+    .masonry-wrapper {
+      padding: 20px 0 70px;
+    }
+
+    .masonry-grid {
+      column-count: 4;
+      column-gap: 18px;
+    }
+
+    .art-card {
+      break-inside: avoid;
+      margin-bottom: 18px;
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      background: white;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+      cursor: pointer;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .art-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 34px rgba(0,0,0,0.10);
+    }
+
+    .art-card img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    .art-overlay {
+      position: absolute;
+      inset: auto 0 0 0;
+      padding: 16px;
+      background: linear-gradient(to top, rgba(0,0,0,0.70), rgba(0,0,0,0));
+      color: white;
+    }
+
+    .art-overlay h3 {
+      font-size: 1rem;
+      margin: 0 0 4px;
+      font-weight: 700;
+    }
+
+    .art-overlay p {
+      margin: 0;
+      font-size: 0.9rem;
+      opacity: 0.9;
+    }
+
+    .submission-note {
+      background: white;
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.05);
+      margin-top: 28px;
+      text-align: center;
+    }
+
+    .submission-note h2 {
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+
+    .submission-note p {
+      color: #5f5f5f;
+      max-width: 700px;
+      margin: 12px auto 0;
+    }
+
+    .modal-content {
+      border: none;
+      border-radius: 24px;
+      overflow: hidden;
+    }
+
+    .modal-body {
+      padding: 0;
+    }
+
+    .art-modal-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      min-height: 320px;
+      background: #eee;
+    }
+
+    .art-modal-text {
+      padding: 32px;
+    }
+
+    .art-modal-text .eyebrow {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #6f6f6f;
+      margin-bottom: 10px;
+    }
+
+    .art-modal-text h2 {
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    .art-modal-text .artist {
+      font-size: 1rem;
+      margin-bottom: 18px;
+      color: #4f4f4f;
+    }
+
+    .art-modal-text .bio {
+      color: #5b5b5b;
+      line-height: 1.7;
+    }
+
+    .modal-close-btn {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      z-index: 10;
+      border: none;
+      background: rgba(255,255,255,0.9);
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      font-size: 1.2rem;
+    }
+
+    @media (max-width: 1200px) {
+      .masonry-grid {
+        column-count: 3;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .masonry-grid {
+        column-count: 2;
+      }
+
+      .art-hero h1 {
+        font-size: 2.3rem;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .masonry-grid {
+        column-count: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="NavigationBar">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand me-2" href="index.html">
+          <img src="Images/website title card (1).png" alt="Uyg Youth logo" style="margin-top: -1px;" class="WebsiteNavbarLogo"/>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link active" href="teams.html">About</a></li>
+            <li class="nav-item"><a class="nav-link active" href="impact.html">Impact</a></li>
+            <li class="nav-item"><a class="nav-link active" href="art.html">Art</a></li>
+            <li class="nav-item"><a class="nav-link active" href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <section class="art-hero">
+    <div class="container">
+      <h1>Featured Art</h1>
+      <p>
+        A curated space for Uyghur youth creativity, memory, identity, and expression.
+        Explore featured submissions and share your own work with the community.
+      </p>
+
+      <div class="art-actions">
+        <a class="btn btn-primary" href="https://forms.gle/YOUR-FORM-LINK-HERE" target="_blank" rel="noopener noreferrer">Submit Your Art</a>
+        <a class="btn btn-outline-dark" href="#gallery">View Gallery</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="masonry-wrapper" id="gallery">
+    <div class="container">
+      <div class="masonry-grid">
+
+        <div class="art-card"
+             data-title="Threads of Memory"
+             data-artist="Amina"
+             data-bio="A digital collage inspired by memory, language, and inherited identity. This piece reflects the quiet ways culture survives through symbols, textiles, and personal remembrance."
+             data-image="Images/art1.jpg">
+          <img src="Images/art1.jpg" alt="Threads of Memory by Amina">
+          <div class="art-overlay">
+            <h3>Threads of Memory</h3>
+            <p>by Amina</p>
+          </div>
+        </div>
+
+        <div class="art-card"
+             data-title="Blue Homeland"
+             data-artist="Nur"
+             data-bio="This painting explores longing, distance, and homeland through cool tones and layered texture. It was created as a reflection on belonging across borders."
+             data-image="Images/art2.jpg">
+          <img src="Images/art2.jpg" alt="Blue Homeland by Nur">
+          <div class="art-overlay">
+            <h3>Blue Homeland</h3>
+            <p>by Nur</p>
+          </div>
+        </div>
+
+        <div class="art-card"
+             data-title="Echoes"
+             data-artist="Selin"
+             data-bio="A mixed-media portrait centered on silence and resilience. The work draws from intergenerational emotion and the power of being seen."
+             data-image="Images/art3.jpg">
+          <img src="Images/art3.jpg" alt="Echoes by Selin">
+          <div class="art-overlay">
+            <h3>Echoes</h3>
+            <p>by Selin</p>
+          </div>
+        </div>
+
+        <div class="art-card"
+             data-title="Spring in Exile"
+             data-artist="Rahima"
+             data-bio="A soft visual study of renewal, rooted in seasonal symbolism and diaspora feeling. This piece was made to hold both grief and hope at once."
+             data-image="Images/art4.jpg">
+          <img src="Images/art4.jpg" alt="Spring in Exile by Rahima">
+          <div class="art-overlay">
+            <h3>Spring in Exile</h3>
+            <p>by Rahima</p>
+          </div>
+        </div>
+
+        <div class="art-card"
+             data-title="Doppa Dreams"
+             data-artist="Elzar"
+             data-bio="A stylized illustration celebrating Uyghur visual identity through pattern and shape. The piece plays with contemporary design while staying rooted in heritage."
+             data-image="Images/art5.jpg">
+          <img src="Images/art5.jpg" alt="Doppa Dreams by Elzar">
+          <div class="art-overlay">
+            <h3>Doppa Dreams</h3>
+            <p>by Elzar</p>
+          </div>
+        </div>
+
+        <div class="art-card"
+             data-title="Holding Language"
+             data-artist="Meryem"
+             data-bio="This work reflects the tenderness and urgency of preserving language. It centers the emotional bond between speech, memory, and identity."
+             data-image="Images/art6.jpg">
+          <img src="Images/art6.jpg" alt="Holding Language by Meryem">
+          <div class="art-overlay">
+            <h3>Holding Language</h3>
+            <p>by Meryem</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="submission-note">
+        <h2>Want your art featured?</h2>
+        <p>
+          We welcome submissions from Uyghur youth and community creatives. Share your work, its title,
+          your name or preferred display name, and a short artist bio through our submission form.
+        </p>
+        <div class="art-actions">
+          <a class="btn btn-primary" href="https://forms.gle/YOUR-FORM-LINK-HERE" target="_blank" rel="noopener noreferrer">Submit Artwork</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="modal fade" id="artModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content position-relative">
+        <button type="button" class="modal-close-btn" data-bs-dismiss="modal" aria-label="Close">✕</button>
+        <div class="modal-body">
+          <div class="row g-0">
+            <div class="col-lg-7">
+              <img id="modalImage" class="art-modal-image" src="" alt="">
+            </div>
+            <div class="col-lg-5">
+              <div class="art-modal-text">
+                <div class="eyebrow">Featured Submission</div>
+                <h2 id="modalTitle"></h2>
+                <div class="artist" id="modalArtist"></div>
+                <p class="bio" id="modalBio"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer id="contact" class="text-center text-lg-start bg-body-tertiary text-muted mt-5">
+    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+      <div class="me-5 d-none d-lg-block">
+        <span>Get connected with us on social networks:</span>
+      </div>
+      <div>
+        <a href="https://www.instagram.com/uygyouth/" target="_blank" rel="noopener noreferrer" class="me-4 text-reset">@uygyouth</a>
+      </div>
+    </section>
+
+    <section class="InfoFooter">
+      <div class="container text-center text-md-start mt-5">
+        <div class="row mt-3">
+          <img src="Images/YouthWebsiteHero1.jpeg" alt="Logo" class="FooterLogo">
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <h6 class="text-uppercase fw-bold mb-4">Uyghur Youth International</h6>
+            <p>
+              Uyg Youth is a youth-led platform connecting Uyghur youth around the world through culture,
+              advocacy, creativity, and community.
+            </p>
+          </div>
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <h6 class="text-uppercase fw-bold mb-4">Useful links</h6>
+            <p><a href="index.html" class="text-reset">Home</a></p>
+            <p><a href="teams.html" class="text-reset">About</a></p>
+            <p><a href="impact.html" class="text-reset">Impact</a></p>
+            <p><a href="art.html" class="text-reset">Art</a></p>
+          </div>
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+            <p><a href="https://www.instagram.com/uygyouth/" target="_blank" rel="noopener noreferrer">@uygyouth</a></p>
+            <p><a href="https://www.linkedin.com/company/uygyouth/" target="_blank" rel="noopener noreferrer">Uyghur Youth International</a></p>
+            <p><a href="mailto:admin@uygyouth.org">admin@uygyouth.org</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+      © 2026 Uyg Youth International. All rights reserved | Made by Uyghurs, for Uyghurs! 💙
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const artCards = document.querySelectorAll('.art-card');
+    const modalElement = document.getElementById('artModal');
+    const artModal = new bootstrap.Modal(modalElement);
+
+    const modalTitle = document.getElementById('modalTitle');
+    const modalArtist = document.getElementById('modalArtist');
+    const modalBio = document.getElementById('modalBio');
+    const modalImage = document.getElementById('modalImage');
+
+    artCards.forEach(card => {
+      card.addEventListener('click', () => {
+        const title = card.dataset.title;
+        const artist = card.dataset.artist;
+        const bio = card.dataset.bio;
+        const image = card.dataset.image;
+
+        modalTitle.textContent = title;
+        modalArtist.textContent = `by ${artist}`;
+        modalBio.textContent = bio;
+        modalImage.src = image;
+        modalImage.alt = `${title} by ${artist}`;
+
+        artModal.show();
+      });
+    });
+  </script>
+</body>
+</html>
