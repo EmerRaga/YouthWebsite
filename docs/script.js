@@ -105,7 +105,7 @@ window.openPanel = function(member) {
       <h2>Samina</h2>
       <p class="panel-role">Outreach Officer</p>
       <p>
-        Samira is a 17 y.o. High School student based in U.S. and currently has an interest in law, politics and history. She joined Uyg Youth because she wants to improve uyghur community and make a strong representation of who Uyghurs are in the world area. Her hobbies are reading books, research, MUN, cooking, movies and traveling.
+        Samina is a 17 y.o. High School student based in U.S. and currently has an interest in law, politics and history. She joined Uyg Youth because she wants to improve uyghur community and make a strong representation of who Uyghurs are in the world area. Her hobbies are reading books, research, MUN, cooking, movies and traveling.
       </p>
       <p>
        “Tirishiqan – yetidu, yalqau – qelidu." "The diligent succeed, the lazy fall behind." - Uyghur proverb
