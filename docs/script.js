@@ -102,7 +102,7 @@ window.openPanel = function(member) {
   if (member === "panel7") {
     text.innerHTML = `
       <img src="Images/samira.jpeg" class="panel-img">
-      <h2>Samira</h2>
+      <h2>Samina</h2>
       <p class="panel-role">Outreach Officer</p>
       <p>
         Samira is a 17 y.o. High School student based in U.S. and currently has an interest in law, politics and history. She joined Uyg Youth because she wants to improve uyghur community and make a strong representation of who Uyghurs are in the world area. Her hobbies are reading books, research, MUN, cooking, movies and traveling.
