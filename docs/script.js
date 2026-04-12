@@ -101,7 +101,7 @@ window.openPanel = function(member) {
 
   if (member === "panel7") {
     text.innerHTML = `
-      <img src="Images/samira.png" class="panel-img">
+      <img src="Images/samira.jpeg" class="panel-img">
       <h2>Samira</h2>
       <p class="panel-role">Outreach Officer</p>
       <p>
