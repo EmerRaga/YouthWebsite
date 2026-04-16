@@ -30,7 +30,7 @@ window.openPanel = function(member) {
         <a href="https://www.linkedin.com/in/emin-yusuyin-376b18272/" target="_blank" class="btn-linkedin">LinkedIn</a>
       </p>
       <p>
-        Emin co-foundeded Uyghur Youth alongside Nazeeya in 2025, and now oversee's everything as Deputy Director, including all work done in Canada, creating social media post's and collabrating within different departments of the Uyghur Youth. Student at the University of Alberta going to studying PoliSci, he hopes to make at least one meaningful impact during his lifetime.
+        Emin co-foundeded Uyghur Youth alongside Nazeeya in 2025, and now oversee's everything as Deputy Director, including all work done in Canada, creating social media post's and collabrating within different departments of the Uyghur Youth. Student at the University of Alberta going to study PoliSci, he hopes to make at least one meaningful impact during his lifetime.
       </p>
       <p>
         “If you don’t awaken, you will remain in darkness forever.” - Abdukhaliq Uyghur
