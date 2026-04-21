@@ -113,6 +113,21 @@ window.openPanel = function(member) {
     `;
   }
 
+  
+    if (member === "panel8") {
+    text.innerHTML = `
+      <img src="Images/Rayhan.png" class="panel-img">
+      <h2>Rayhan</h2>
+      <p class="panel-role">Media Editor</p>
+      <p>
+        Rayhan is a 17 year old canadian student. She enjoys creating connections between her and her peers, and also introducing people to one another. Other than that, Rayhan enjoys playing games, such as truth or dare, and watching anime. Her creativity is without a doubt her strength.
+      </p>
+      <p>
+      "And indeed, the Qur’an is a reminder for the righteous.", Al-Haaqqa : 48
+      </p>
+    `;
+  }
+
 
   panel.style.bottom = "0";
 };
